@@ -1,6 +1,6 @@
 Package.describe({
   name: 'slacker87:lightstreamer',
-  version: '0.0.2',
+  version: '0.0.4',
   // Brief, one-line summary of the package.
   summary: 'A wrapper for the lightstreamer javascript client in meteor',
   // URL to the Git repository containing the source code for this package.
@@ -12,6 +12,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
+  api.addFiles('require.js');
   api.addFiles('lightstreamer.js');
 });
 
