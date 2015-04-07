@@ -1,13 +1,12 @@
-// Write your package code here!
 /*
  * LIGHTSTREAMER - www.lightstreamer.com
  * Lightstreamer JavaScript Client
  * Version 6.2.5 build 1669
  * Copyright (c) 2004-2015 Weswit Srl. All Rights Reserved.
  * Contains: LightstreamerClient, Subscription
- * AMD
+ * AMD (simple AMD loader included)
  */
-(function(){function u(){return function(h){return h}}function F(){return function(){}}function H(h){return function(g){this[h]=g}}function M(h){return function(){return this[h]}}function V(h){return function(){return h}}
+function define(a,c,e){define.a[a]={e:c,d:e}}define.a={};define.b=function(a,c,e){for(var g=[],f=0;f<a.length;f++){var d=define.a[a[f]];if(!d)throw"All the modules must already be 'defined' Async load not supported: use a full-featured AMD loader like requirejs";d.c||define.b(d.e,d.d,a[f]);g.push(d.c)}a=c.apply(null,g);if(e)define.a[e].c=a};function require(a,c){define.b(a,c,null)};(function(){function u(){return function(h){return h}}function F(){return function(){}}function H(h){return function(g){this[h]=g}}function M(h){return function(){return this[h]}}function V(h){return function(){return h}}
 define("IllegalStateException",[],function(){function h(g){this.name="IllegalStateException";this.message=g}h.prototype={toString:function(){return["[",this.name,this.message,"]"].join("|")}};return h});
 define("Environment",["IllegalStateException"],function(h){var g="undefined"!==typeof window&&navigator&&document,f="undefined"!==typeof importScripts,d="object"==typeof process&&(/node(\.exe)?$/.test(process.execPath)||process.node&&process.v8||process.versions&&process.versions.node&&process.versions.v8);if(g&&!document.getElementById)throw new h("Not supported browser");var c={isBrowserDocument:function(){return g},isBrowser:function(){return!d&&(g||f)},isNodeJS:function(){return!g&&d},isWebWorker:function(){return!g&&
 !d&&f},browserDocumentOrDie:function(){if(!this.isBrowserDocument())throw new h("Trying to load a browser-only module on non-browser environment");}};c.isBrowserDocument=c.isBrowserDocument;c.isBrowser=c.isBrowser;c.isNodeJS=c.isNodeJS;c.isWebWorker=c.isWebWorker;c.browserDocumentOrDie=c.browserDocumentOrDie;return c});
